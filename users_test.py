@@ -112,7 +112,12 @@ class TestCredentials(unittest.TestCase):
         credentials_found = Credentials.if_credential_exist("laurah52")
         self.assertTrue(credentials_found)
 
-  
+  def test_display_all_credentials(self):
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
   
 
