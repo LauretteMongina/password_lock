@@ -17,3 +17,12 @@ class Users:
   def __init__(self,username,password):
     self.username = username
     self.password = password
+
+
+class Credentials:
+  """
+  class that generates a new instance of credentials
+  """
+  credentials_list = []
+
+  
