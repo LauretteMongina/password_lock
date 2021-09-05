@@ -1,4 +1,5 @@
-
+import random
+import string
 class Users:
   """
   class that generates new instance of user
@@ -76,3 +77,10 @@ class Credentials:
         method that returns the credentials list
         '''
         return cls.credentials_list  
+
+  def randompassword(stringlength=7):
+    """
+    to generate random passwords
+    """
+    password = string.ascii_uppercase + string.ascii_lowercase + string.digits
+    return ''.join(random.choice(password)for i in range(stringlength))
