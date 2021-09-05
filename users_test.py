@@ -66,6 +66,15 @@ class TestCredentials(unittest.TestCase):
         '''
         Credentials.credentials_list = []
 
+  def test_save_many_credentials(self):
+        '''
+        test to check if we can save multiple credentials objects to our credentials list
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Quora","laurah52","0345") 
+        test_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list),2)
+  
   
 
 if __name__ == '__main__':
