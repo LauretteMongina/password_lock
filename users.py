@@ -25,4 +25,12 @@ class Credentials:
   """
   credentials_list = []
 
-  
+
+
+  def __init__(self,account,username,password):
+    """
+    method that defines credentials to be stored
+    """
+    self.account = account
+    self.username = username
+    self.password = password
