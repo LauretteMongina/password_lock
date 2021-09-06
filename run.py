@@ -36,5 +36,28 @@ def save_credentials(credentials):
     Function to save Credentials to the credentials list
     """
     credentials. save_credentials()
+def display_accounts():
+    """
+    Function that returns all the saved credential.
+    """
+    return Credentials.display_credentials()
+
+def delete_credential(credentials):
+    """
+    Function to delete a Credentials from credentials list
+    """
+    credentials.delete_credentials()
+
+def find_credential(username):
+    """
+    Function that finds a Credentials by a username and returns the Credentials that belong to that username
+    """
+    return Credentials.find_by_username(username)
+def check_credentials(username):
+    """
+    Function that check if a Credentials exists with that username and return true or false
+    """
+    return Credentials.if_credential_exist(username)
+
 
 
