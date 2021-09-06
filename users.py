@@ -45,7 +45,17 @@ class Credentials:
     self.account = account
     self.username = username
     self.password = password
-
+  
+  @classmethod
+  def verify_users(cls,username, password):
+        """
+        method to verify whether the user is in our user_list or not
+        """
+        a_users = ""
+        for users in Users.users_list:
+            if(users.username == username and users.password == password):
+                    a_users == users.username
+        return a_users
   @classmethod
   def find_by_username(cls,username):
         '''
