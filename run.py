@@ -59,5 +59,10 @@ def check_credentials(username):
     """
     return Credentials.if_credential_exist(username)
 
-
+def random_Password():
+    '''
+    generates a random password for the user.
+    '''
+    new_password=Credentials.randompassword()
+    return new_password
 
